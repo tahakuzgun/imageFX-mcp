@@ -1,0 +1,50 @@
+{
+  "name": "imageFX-MCP",
+  "description": "Google Labs ImageFX API, Cursor MCP ile kullanıma uyarlanmış",
+  "version": "1.0.0",
+  "commands": {
+    "generate": {
+      "command": "bun run src/cli.ts",
+      "description": "Görüntü oluştur",
+      "arguments": [
+        {
+          "name": "prompt",
+          "description": "Görüntü oluşturma komutu",
+          "required": true,
+          "type": "string",
+          "prefix": "--prompt="
+        },
+        {
+          "name": "authf",
+          "description": "Yetkilendirme dosyası yolu",
+          "required": true,
+          "type": "string",
+          "prefix": "--authf="
+        },
+        {
+          "name": "count",
+          "description": "Oluşturulacak görüntü sayısı",
+          "required": false,
+          "type": "number",
+          "prefix": "--count=",
+          "default": 4
+        },
+        {
+          "name": "seed",
+          "description": "Görüntü seed değeri",
+          "required": false,
+          "type": "number",
+          "prefix": "--seed="
+        },
+        {
+          "name": "dir",
+          "description": "Çıktı dizini",
+          "required": false,
+          "type": "string",
+          "prefix": "--dir=",
+          "default": "."
+        }
+      ]
+    }
+  }
+}
